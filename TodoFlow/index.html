@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TodoFlow — Organize your life</title>
+    <link rel="icon" type="image/png" href="image%20assets/flow.logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100 selection:bg-indigo-500/30">
+<!-- Nav -->
+<header class="max-w-7xl mx-auto px-4 py-5">
+    <div class="flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2">
+            <img src="image%20assets/flow.logo.png" alt="TodoFlow Logo" class="h-14 w-auto opacity-50">
+        </a>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="relative overflow-hidden">
+    <!-- Soft gradient blob -->
+    <div class="pointer-events-none absolute -top-24 right-[-10%] h-80 w-80 rounded-full bg-indigo-500/30 blur-[80px]"></div>
+
+    <div class="max-w-7xl mx-auto px-4 pt-6 pb-20 grid lg:grid-cols-2 gap-10 items-center">
+        <!-- Copy -->
+        <div class="relative">
+        <span class="inline-flex items-center gap-2 text-xs font-medium px-2.5 py-1.5 rounded-full bg-white/5 ring-1 ring-white/10 mb-4">
+          <span class="size-1.5 rounded-full bg-emerald-400"></span> Lightweight. Fast. Private.
+        </span>
+
+            <h1 class="text-4xl sm:text-5xl font-semibold leading-tight tracking-tight">
+                Organize your life, <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-emerald-400">one task</span> at a time.
+            </h1>
+
+            <p class="mt-4 text-slate-300/90 max-w-xl">
+                A premium, zero-friction to-do app with filters, progress, and batch actions.
+                Works offline. Your data stays on your device.
+            </p>
+
+            <!-- CTAs -->
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a href="app.html"
+                   class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition shadow-lg shadow-indigo-500/20">
+                    Get Started
+                </a>
+                <a href="#features"
+                   class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 ring-1 ring-white/10">
+                    See Features
+                </a>
+            </div>
+        </div>
+
+        <!-- Mockup -->
+        <div class="relative">
+            <div class="mx-auto lg:mx-0 w-full max-w-xl rounded-2xl bg-white/5 ring-1 ring-white/10 shadow-2xl shadow-black/30 p-2">
+                <!-- Browser chrome -->
+                <div class="flex items-center gap-2 px-3 py-2">
+                    <span class="size-2.5 rounded-full bg-rose-400/70"></span>
+                    <span class="size-2.5 rounded-full bg-amber-400/70"></span>
+                    <span class="size-2.5 rounded-full bg-emerald-400/70"></span>
+                    <span class="ml-3 text-xs text-slate-400/80">todoflow.app</span>
+                </div>
+                <!-- Screenshot area: replace src with your app screenshot/GIF -->
+                <div class="rounded-xl overflow-hidden ring-1 ring-white/10">
+                    <img src="image%20assets/hero-img.png" alt="TodoFlow app screenshot" class="w-full h-[380px] object-cover object-top bg-slate-800" />
+                </div>
+            </div>
+            <!-- Floating stat card -->
+            <div class="hidden sm:block absolute -bottom-6 -left-4 rounded-xl bg-white/5 ring-1 ring-white/10 px-4 py-3 shadow-xl shadow-black/30 backdrop-blur">
+                <p class="text-xs text-slate-300">Today's completion</p>
+                <p class="text-lg font-semibold text-emerald-400">76%</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FEATURES -->
+<section id="features" class="relative py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">Features</h2>
+            <p class="mt-3 text-slate-300/90">
+                Lightweight, fast, and private. TodoFlow feels like a tiny SaaS without the bloat.
+            </p>
+        </div>
+
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card -->
+            <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur shadow-xl shadow-black/20">
+                <div class="text-2xl">📊</div>
+                <h3 class="mt-3 font-semibold">Progress Overview</h3>
+                <p class="mt-2 text-sm text-slate-300/90">Live completion % with totals for All, Active, and Completed.</p>
+            </article>
+
+            <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur shadow-xl shadow-black/20">
+                <div class="text-2xl">🔎</div>
+                <h3 class="mt-3 font-semibold">Smart Filters</h3>
+                <p class="mt-2 text-sm text-slate-300/90">Switch views instantly: All, Active, Completed — with counts.</p>
+            </article>
+
+            <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur shadow-xl shadow-black/20">
+                <div class="text-2xl">💾</div>
+                <h3 class="mt-3 font-semibold">Offline & Private</h3>
+                <p class="mt-2 text-sm text-slate-300/90">localStorage keeps your data on-device. Works without internet.</p>
+            </article>
+
+            <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur shadow-xl shadow-black/20">
+                <div class="text-2xl">⚡</div>
+                <h3 class="mt-3 font-semibold">Batch Actions</h3>
+                <p class="mt-2 text-sm text-slate-300/90">Mark all complete or clear completed in one click.</p>
+            </article>
+
+            <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur shadow-xl shadow-black/20">
+                <div class="text-2xl">🎯</div>
+                <h3 class="mt-3 font-semibold">Priorities & Timestamps</h3>
+                <p class="mt-2 text-sm text-slate-300/90">Color tags plus created/updated times for every task.</p>
+            </article>
+
+            <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur shadow-xl shadow-black/20">
+                <div class="text-2xl">⬇️</div>
+                <h3 class="mt-3 font-semibold">Export CSV</h3>
+                <p class="mt-2 text-sm text-slate-300/90">Download your task list for reports or backups.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section id="how" class="relative py-16 sm:py-20 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">How it works</h2>
+            <p class="mt-3 text-slate-300/90">Three simple steps to stay on track.</p>
+        </div>
+
+        <ol class="mt-10 grid sm:grid-cols-3 gap-6 counter-reset steps">
+            <!-- Step 1 -->
+            <li class="group relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur shadow-xl shadow-black/20">
+                <div class="absolute -top-3 -left-3 size-9 grid place-items-center rounded-xl bg-indigo-500 text-slate-50 font-semibold shadow-lg shadow-indigo-500/30">
+                    1
+                </div>
+                <h3 class="pl-8 font-semibold">Add</h3>
+                <p class="mt-2 text-sm text-slate-300/90 pl-8">
+                    Hit <span class="px-1.5 py-0.5 rounded bg-white/10">Add Todo</span>, type your task, set priority, save.
+                </p>
+            </li>
+
+            <!-- Step 2 -->
+            <li class="group relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur shadow-xl shadow-black/20">
+                <div class="absolute -top-3 -left-3 size-9 grid place-items-center rounded-xl bg-emerald-500 text-slate-50 font-semibold shadow-lg shadow-emerald-500/30">
+                    2
+                </div>
+                <h3 class="pl-8 font-semibold">Organize</h3>
+                <p class="mt-2 text-sm text-slate-300/90 pl-8">
+                    Use filters for All/Active/Completed. Reorder and batch-complete as you go.
+                </p>
+            </li>
+
+            <!-- Step 3 -->
+            <li class="group relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur shadow-xl shadow-black/20">
+                <div class="absolute -top-3 -left-3 size-9 grid place-items-center rounded-xl bg-rose-500 text-slate-50 font-semibold shadow-lg shadow-rose-500/30">
+                    3
+                </div>
+                <h3 class="pl-8 font-semibold">Track</h3>
+                <p class="mt-2 text-sm text-slate-300/90 pl-8">
+                    Watch your progress bar climb. Become more productive
+                </p>
+            </li>
+        </ol>
+
+        <!-- CTA -->
+        <div class="mt-10">
+            <a href="app.html" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition shadow-lg shadow-indigo-500/20">
+                Try it today
+                <span aria-hidden>→</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>

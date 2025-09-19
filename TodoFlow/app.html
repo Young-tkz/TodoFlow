@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"><!-- Tell the browser we're using UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Mobile-friendly -->
+    <title>Todo-Flow</title><!-- Page title -->
+    <link rel="icon" type="image/png" href="image%20assets/flow.logo.png">
+    <!-- Tailwind (CDN) for quick styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+
+<!-- Auth UI (shown when logged OUT) -->
+<section id="authSection" class="max-w-sm mx-auto bg-slate-900/70 rounded-xl p-6 my-8">
+    <h2 class="text-lg font-semibold mb-4 text-center">Welcome to TodoFlow</h2>
+    <input id="email" type="email" placeholder="Email"
+           class="w-full mb-2 px-3 py-2 rounded bg-slate-800/70 outline-none">
+    <input id="password" type="password" placeholder="Password"
+           class="w-full mb-3 px-3 py-2 rounded bg-slate-800/70 outline-none">
+    <div class="flex gap-2">
+        <button id="signupBtn" class="flex-1 bg-emerald-500 hover:bg-emerald-600 py-2 rounded">Sign Up</button>
+        <button id="loginBtn"  class="flex-1 bg-indigo-500 hover:bg-indigo-600 py-2 rounded">Login</button>
+    </div>
+    <button id="logoutBtn" class="hidden mt-3 w-full bg-rose-500 hover:bg-rose-600 py-2 rounded">Logout</button>
+</section>
+
+<!-- Todo app (hidden until logged IN) -->
+<!-- Navbar -->
+<nav id="navbar" class="hidden w-full bg-slate-900/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+
+        <!-- Left: Logo -->
+        <div class="flex items-center gap-2">
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex items-center gap-2">
+                    <img src="image%20assets/flow.logo.png" alt="TodoFlow Logo" class="h-10 w-auto ">
+                </a>
+            </div>
+        </div>
+
+        <!-- Right: User actions -->
+        <div class="flex items-center gap-4">
+            <!-- User icon (SVG) -->
+            <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-slate-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+                    <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5
+                   2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10
+                   1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+                </svg>
+            </div>
+
+
+            <!-- Logout button -->
+            <button id="logoutBtnNav"
+                    class="px-3 py-1.5 rounded-lg bg-rose-500 hover:bg-rose-600 text-sm">
+                Logout
+            </button>
+        </div>
+
+    </div>
+</nav>
+
+<main id="appMain" class="hidden max-w-xl mx-auto p-6">
+    <!-- TodoFlow UI -->
+    <header class="mb-4">
+        <h1 class="text-2xl font-semibold tracking-tight">TodoFlow</h1>
+        <p id="counts" class="mt-1 text-sm text-slate-400">Total: 0 • Active: 0 • Completed: 0</p>
+        <div class="mt-3 h-2 w-full rounded-full bg-white/10 overflow-hidden">
+            <div id="progress" class="h-full w-0 bg-emerald-500 transition-all"></div>
+        </div>
+    </header>
+
+    <form id="newTask" class="flex gap-2 mb-4">
+        <input id="title" class="flex-1 rounded-xl px-4 py-3 bg-slate-800/70 outline-none ring-1 ring-white/10 focus:ring-indigo-500"
+               placeholder="What needs to be done?">
+        <select id="prio" class="rounded-xl px-3 bg-slate-800/70 ring-1 ring-white/10 focus:ring-indigo-500">
+            <option value="">Priority</option>
+            <option value="low">low</option>
+            <option value="med">med</option>
+            <option value="high">high</option>
+        </select>
+        <button class="rounded-xl px-4 bg-indigo-500 hover:bg-indigo-600">Add</button>
+    </form>
+
+    <div id="filters" class="flex items-center gap-2 mb-3">
+        <button data-filter="all" class="px-3 py-1 rounded-lg bg-slate-800">All</button>
+        <button data-filter="active" class="px-3 py-1 rounded-lg hover:bg-slate-800">Active</button>
+        <button data-filter="completed" class="px-3 py-1 rounded-lg hover:bg-slate-800">Completed</button>
+    </div>
+
+    <ul id="list"></ul>
+
+    <div class="flex justify-between mt-3 text-sm text-slate-300">
+        <button id="clearDone" class="opacity-80 hover:opacity-100">Clear completed</button>
+        <button id="markAll" class="opacity-80 hover:opacity-100">Mark all complete</button>
+    </div>
+</main>
+
+<!-- Scripts -->
+<script type="module" src="./app.js"></script>
+<script type="module" src="./firebase.js"></script>
+</body>
+
+
+
+
+
+
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
